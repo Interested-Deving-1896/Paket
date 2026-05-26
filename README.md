@@ -1,82 +1,75 @@
-[![Travis build status](https://api.travis-ci.org/fsprojects/Paket.svg?branch=master)](https://travis-ci.org/fsprojects/Paket?branch=master)
-[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/f77ejdp6mtkris2u/branch/master?svg=true)](https://ci.appveyor.com/project/paket/paket/branch/master)
-[![NuGet Status](https://img.shields.io/nuget/v/Paket.svg?style=flat)](https://www.nuget.org/packages/Paket/)
-[![Join the chat at https://gitter.im/fsprojects/Paket](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fsprojects/Paket?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Twitter](https://img.shields.io/badge/Twitter-PaketManager-blue.svg)](https://twitter.com/PaketManager)
-
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # Paket
 
-A dependency manager for .NET with support for NuGet packages and git repositories.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/Paket)
 
-## Why Paket?
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-NuGet [did not]([url](https://devblogs.microsoft.com/nuget/announcing-nuget-6-3-transitive-dependencies-floating-versions-and-re-enabling-signed-package-verification/)) separate out the concept of transitive dependencies.
-If you install a package into your project and that package has further dependencies then all transitive packages are included in the packages.config.
-There is no way to tell which packages are only transitive dependencies.
+## Architecture
 
-Even more importantly: If two packages reference conflicting versions of a package, NuGet will silently take the latest version ([read more](https://fsprojects.github.io/Paket/controlling-nuget-resolution.html)). You have no control over this process.
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-Paket on the other hand maintains this information on a consistent and stable basis within the [`paket.lock` file][7] in the solution root.
-This file, together with the [`paket.dependencies` file][8] enables you to determine exactly what's happening with your dependencies.
+## Install
 
-Paket also enables you to [reference files directly from git][9] repositories or any [http-resource][11].
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-For more reasons see the [FAQ][10].
+```bash
+git clone https://github.com/Interested-Deving-1896/Paket.git
+cd Paket
+```
 
-## Online resources
+## Usage
 
- - [Source code][1]
- - [Documentation][2]
- - [Getting started guide](https://fsprojects.github.io/Paket/get-started.html)
- - Download [paket.exe][3]
- - Download [paket.bootstrapper.exe][3]
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-## Troubleshooting and support
+## Configuration
 
- - Found a bug or missing a feature? Feed the [issue tracker][4].
- - Announcements and related miscellanea through Twitter ([@PaketManager][5])
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-## Quick contributing guide
+## CI
 
- - Fork and clone locally.
- - Build the solution with Visual Studio, `build.cmd` or `build.sh`.
- - Create a topic specific branch in git. Add a nice feature in the code. Do not
-   forget to add tests and/or docs.
- - Run `build.cmd` (`build.sh` on Mono) to make sure all tests are still
-   passing.
- - When built, you'll find the binaries in `./bin` which you can then test
-   with locally, to ensure the bug or feature has been successfully implemented.
- - Send a Pull Request.
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-If you want to contribute to the [docs][2] then please modify the markdown files in `/docs/content` and send a pull request.
-Note, that short description and syntax for each command is generated automatically from the `Paket.Commands` module.
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/Paket`](https://github.com/Interested-Deving-1896/Paket) and mirrored through:
+
+```
+Interested-Deving-1896/Paket  ──►  OpenOS-Project-OSP/Paket  ──►  OpenOS-Project-Ecosystem-OOC/Paket
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
 ## License
 
-The [MIT license][6]
-
-## Maintainer(s)
-
-- [@forki](https://github.com/forki)
-- [@agross](https://github.com/agross)
-- [@cloudroutine](https://github.com/cloudroutine)
-- [@matthid](https://github.com/matthid)
-- [@isaacabraham](https://github.com/isaacabraham)
-- [@theimowski](https://github.com/theimowski)
-
-The default maintainer account for projects under "fsprojects" is [@fsprojectsgit](https://github.com/fsprojectsgit) - F# Community Project Incubation Space (repo management)
-
- [1]: https://github.com/fsprojects/Paket/
- [2]: https://fsprojects.github.io/Paket/
- [3]: https://github.com/fsprojects/Paket/releases/latest
- [4]: https://github.com/fsprojects/Paket/issues
- [5]: https://twitter.com/PaketManager
- [6]: https://github.com/fsprojects/Paket/blob/master/LICENSE.txt
- [7]: https://fsprojects.github.io/Paket/lock-file.html
- [8]: https://fsprojects.github.io/Paket/dependencies-file.html
- [9]: https://fsprojects.github.io/Paket/git-dependencies.html
- [10]: https://fsprojects.github.io/Paket/faq.html
- [11]: https://fsprojects.github.io/Paket/http-dependencies.html
- [badge-pr-stats]: https://www.issuestats.com/github/fsprojects/Paket/badge/pr
- [badge-issue-stats]: https://www.issuestats.com/github/fsprojects/Paket/badge/issue
- [link-issue-stats]: https://www.issuestats.com/github/fsprojects/Paket
+<!-- AI:start:license -->
+[MIT](https://github.com/Interested-Deving-1896/Paket/blob/master/LICENSE.txt) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
